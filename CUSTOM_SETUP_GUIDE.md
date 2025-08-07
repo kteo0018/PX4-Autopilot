@@ -76,11 +76,12 @@ cp Tools/simulation/gz/models/x500_custom/* Tools/simulation/gz/models/x500_cust
 
 ### Building and Running
 ```bash
-# Build your custom setup
-make px4_sitl gz_x500_custom
+# Build and run your custom setup with custom world
+PX4_GZ_WORLD=z_my_forest make px4_sitl gz_x500_custom
 
-# Run with your custom world
-make px4_sitl gz_x500_custom gazebo-worlds/z_my_forest
+# Alternative: Build first, then run separately
+make px4_sitl gz_x500_custom
+PX4_GZ_WORLD=z_my_forest make px4_sitl gz_x500_custom
 ```
 
 ### Updating from Upstream
@@ -145,7 +146,7 @@ git checkout -b custom-x500-forest
 ### If build fails:
 ```bash
 make clean
-make px4_sitl gz_x500_custom
+PX4_GZ_WORLD=z_my_forest make px4_sitl gz_x500_custom
 ```
 
 ## Next Steps

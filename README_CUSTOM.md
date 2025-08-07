@@ -21,7 +21,7 @@ make px4_sitl gz_x500_custom
 ### 2. Run with Custom World
 ```bash
 # Run with your custom world
-make px4_sitl gz_x500_custom gazebo-worlds/z_my_forest
+PX4_GZ_WORLD=z_my_forest make px4_sitl gz_x500_custom
 ```
 
 ### 3. Alternative Launch Method
