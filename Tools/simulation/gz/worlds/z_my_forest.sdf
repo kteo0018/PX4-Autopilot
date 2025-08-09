@@ -105,7 +105,8 @@
       <pose>-10 -30 0 0 0 0</pose>
     </include>
     
-    <!-- Sparse Pine Trees in the center area for variety -->
+    <!-- DENSE TREE CLUSTERS FOR OPTIMAL OPENVINS INITIALIZATION -->
+    <!-- Central cluster 1: Main takeoff area (SAFE 6-10m spacing) -->
     <include>
       <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
       <name>pine_tree_1</name>
@@ -125,6 +126,210 @@
       <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
       <name>pine_tree_4</name>
       <pose>-8 -8 0 0 0 0</pose>
+    </include>
+    
+    <!-- Central cluster 2: SAFE dense features (6-8m spacing) -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_5</name>
+      <pose>6 6 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_6</name>
+      <pose>-6 6 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_7</name>
+      <pose>6 -6 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_8</name>
+      <pose>-6 -6 0 0 0 0</pose>
+    </include>
+    
+    <!-- Strategic initialization zones: NE quadrant (6-10m spacing) -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_ne_1</name>
+      <pose>15 15 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_ne_2</name>
+      <pose>12 18 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_ne_3</name>
+      <pose>18 12 0 0 0 0</pose>
+    </include>
+    
+    <!-- Strategic initialization zones: NW quadrant (6-10m spacing) -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_nw_1</name>
+      <pose>-15 15 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_nw_2</name>
+      <pose>-12 18 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_nw_3</name>
+      <pose>-18 12 0 0 0 0</pose>
+    </include>
+    
+    <!-- Strategic initialization zones: SE quadrant (6-10m spacing) -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_se_1</name>
+      <pose>15 -15 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_se_2</name>
+      <pose>12 -18 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_se_3</name>
+      <pose>18 -12 0 0 0 0</pose>
+    </include>
+    
+    <!-- Strategic initialization zones: SW quadrant (6-10m spacing) -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_sw_1</name>
+      <pose>-15 -15 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_sw_2</name>
+      <pose>-12 -18 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_sw_3</name>
+      <pose>-18 -12 0 0 0 0</pose>
+    </include>
+    
+    <!-- SAFE high-density feature zones: Optimal tracking distances -->
+    <!-- Inner ring 1: SAFE 6-8m spacing for dense features -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_inner_1</name>
+      <pose>6 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_inner_2</name>
+      <pose>-6 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_inner_3</name>
+      <pose>0 6 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_inner_4</name>
+      <pose>0 -6 0 0 0 0</pose>
+    </include>
+    
+    <!-- Inner ring 2: SAFE 8-10m spacing for medium density -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_inner_5</name>
+      <pose>8 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_inner_6</name>
+      <pose>-8 0 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_inner_7</name>
+      <pose>0 8 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_inner_8</name>
+      <pose>0 -8 0 0 0 0</pose>
+    </include>
+    
+    <!-- Corner clusters for comprehensive coverage -->
+    <!-- NE corner cluster -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_ne_corner_1</name>
+      <pose>22 22 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_ne_corner_2</name>
+      <pose>25 18 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_ne_corner_3</name>
+      <pose>18 25 0 0 0 0</pose>
+    </include>
+    
+    <!-- NW corner cluster -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_nw_corner_1</name>
+      <pose>-22 22 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_nw_corner_2</name>
+      <pose>-25 18 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_nw_corner_3</name>
+      <pose>-18 25 0 0 0 0</pose>
+    </include>
+    
+    <!-- SE corner cluster -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_se_corner_1</name>
+      <pose>22 -22 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_se_corner_2</name>
+      <pose>25 -18 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_se_corner_3</name>
+      <pose>18 -25 0 0 0 0</pose>
+    </include>
+    
+    <!-- SW corner cluster -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_sw_corner_1</name>
+      <pose>-22 -22 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_sw_corner_2</name>
+      <pose>-25 -18 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_sw_corner_3</name>
+      <pose>-18 -25 0 0 0 0</pose>
     </include>
     
     <light name="sunUTC" type="directional">
