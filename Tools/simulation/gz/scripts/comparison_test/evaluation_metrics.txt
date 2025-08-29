@@ -1,0 +1,13 @@
+ORB-SLAM3 Evaluation Metrics
+==============================
+Ground Truth Trees: 48
+SLAM Landmarks: 28
+Max Distance Threshold: 5.0m
+
+Precision: 1.000
+Recall: 0.583
+F1-Score: 0.737
+Mean Distance: 0.20m
+Matched Pairs: 28
+False Positives: 0
+False Negatives: 20
