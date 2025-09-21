@@ -60,7 +60,6 @@
         <always_on>true</always_on>
         <update_rate>30</update_rate>
         <visualize>false</visualize>
-        <topic>world/z_my_forest/model/x500_custom_0/link/camera_link/sensor/camera/image</topic>
       </sensor>
     </link>
 
@@ -165,7 +164,6 @@
         <always_on>true</always_on>
         <update_rate>10</update_rate>
         <visualize>false</visualize>
-        <topic>world/z_my_forest/model/x500_custom_0/link/gps_link/sensor/gps/navsat</topic>
         <gps>
           <horizontal_position_noise>0.05</horizontal_position_noise>
           <vertical_position_noise>0.05</vertical_position_noise>
@@ -212,7 +210,6 @@
         <always_on>true</always_on>
         <update_rate>200</update_rate>
         <visualize>false</visualize>
-        <topic>world/z_my_forest/model/x500_custom_0/link/imu_link/sensor/imu/imu</topic>
         <imu>
           <angular_velocity>
             <x>
