@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.9">
+  <world name="z_simple_forest">
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type="adiabatic"/>
+    <scene>
+      <grid>false</grid>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <!-- Ground coverage only: tiled grass patches from z_my_forest -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_center</name>
+      <pose>20 -20 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_top_middle</name>
+      <pose>35 -20 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_middle_right</name>
+      <pose>20 -35 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_top_right</name>
+      <pose>35 -35 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_bottom_middle</name>
+      <pose>5 -20 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_middle_left</name>
+      <pose>20 -5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_bottom_left</name>
+      <pose>5 -5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_bottom_right</name>
+      <pose>5 -35 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_top_left</name>
+      <pose>35 -5 0 0 0 0</pose>
+    </include>
+
+    <!-- Trees around grass patches (avoiding bottom-left spawn area near 0,0) -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_1</name>
+      <pose>25 -15 0 0 0 1.57</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_1</name>
+      <pose>30 -25 0 0 0 2.35</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_2</name>
+      <pose>35 -30 0 0 0 3.14</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_3</name>
+      <pose>15 -30 0 0 0 1.23</pose>
+    </include>
+
+    <!-- Additional trees for denser, more realistic forest -->
+    <!-- Central area trees -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_4</name>
+      <pose>18 -28 0 0 0 4.12</pose>
+    </include>
+
+    <!-- Oak tree near grasspatch bottom middle -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Oak Tree</uri>
+      <name>oak_tree_2</name>
+      <pose>8 -20 0 0 0 2.34</pose>
+    </include>
+
+    <!-- Top area cluster -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_5</name>
+      <pose>35 -8 0 0 0 0.89</pose>
+    </include>
+
+    <!-- Right area cluster -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_6</name>
+      <pose>12 -32 0 0 0 3.67</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_7</name>
+      <pose>8 -35 0 0 0 1.56</pose>
+    </include>
+
+    <!-- Bottom-right area (safe from spawn) -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_8</name>
+      <pose>12 -12 0 0 0 0.23</pose>
+    </include>
+
+    <!-- Edge trees for natural forest boundary -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_9</name>
+      <pose>35 -25 0 0 0 2.12</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_10</name>
+      <pose>25 -35 0 0 0 3.78</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Pine Tree</uri>
+      <name>pine_tree_11</name>
+      <pose>35 -35 0 0 0 1.45</pose>
+    </include>
+
+    <light name="sunUTC" type="directional">
+      <pose>0 0 500 0 -0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>0.001 0.625 -0.78</direction>
+      <diffuse>0.904 0.904 0.904 1</diffuse>
+      <specular>0.271 0.271 0.271 1</specular>
+      <attenuation>
+        <range>2000</range>
+        <linear>0</linear>
+        <constant>1</constant>
+        <quadratic>0</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>47.397971057728974</latitude_deg>
+      <longitude_deg>8.546163739800146</longitude_deg>
+      <elevation>0</elevation>
+    </spherical_coordinates>
+  </world>
+</sdf>
+
+

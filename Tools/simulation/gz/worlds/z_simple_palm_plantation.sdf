@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.9">
+  <world name="z_simple_palm_plantation">
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type="adiabatic"/>
+    <scene>
+      <grid>false</grid>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <!-- Ground coverage only: tiled grass patches from z_my_forest -->
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_center</name>
+      <pose>20 -20 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_top_middle</name>
+      <pose>35 -20 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_middle_right</name>
+      <pose>20 -35 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_top_right</name>
+      <pose>35 -35 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_bottom_middle</name>
+      <pose>5 -20 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_middle_left</name>
+      <pose>20 -5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_bottom_left</name>
+      <pose>5 -5 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_bottom_right</name>
+      <pose>5 -35 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>https://fuel.ignitionrobotics.org/1.0/hexarotor/models/grasspatch</uri>
+      <name>grasspatch_top_left</name>
+      <pose>35 -5 0 0 0 0</pose>
+    </include>
+
+    <!-- Test importing palm tree meshes in different formats -->
+    <!-- <model name="palm_tree_obj_d2">
+      <static>true</static>
+      <pose>20 -20 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <pose>0 0 0 1.57079632679 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/ken/PX4-Autopilot/Tools/simulation/gz/worlds/Palm_Tree_3D_Models/d2-natural-palm-tree.obj</uri>
+              <scale>0.08 0.08 0.08</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <pose>0 0 0 1.57079632679 0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>file:///home/ken/PX4-Autopilot/Tools/simulation/gz/worlds/Palm_Tree_3D_Models/d2-natural-palm-tree.obj</uri>
+              <scale>0.08 0.08 0.08</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model> -->
+
+    <model name="palm_tree_plantation">
+      <static>true</static>
+      <pose>20 -20 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <!-- <pose>0 0 0 1.57079632679 0 0</pose> -->
+          <geometry>
+            <mesh>
+              <uri>file:///home/ken/PX4-Autopilot/Tools/simulation/gz/worlds/Palm_Tree_3D_Models/Custom_Simple_Fake_Palm_Tree_Plantation/palm-tree-plantation.obj</uri>
+              <!-- <scale>0.18 0.18 0.18</scale> -->
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <!-- <pose>0 0 0 1.57079632679 0 0</pose> -->
+          <geometry>
+            <mesh>
+              <uri>file:///home/ken/PX4-Autopilot/Tools/simulation/gz/worlds/Palm_Tree_3D_Models/Custom_Simple_Fake_Palm_Tree_Plantation/palm-tree-plantation.obj</uri>
+              <!-- <scale>0.18 0.18 0.18</scale> -->
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+	<!-- FAILED TO LOAD IN GZ -->
+    <!-- <model name="palm_tree_usdz">
+      <static>true</static>
+      <pose>20 -20 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>file:///home/ken/PX4-Autopilot/Tools/simulation/gz/worlds/Palm_Tree_3D_Models/d1-natural-palm-tree.usdz</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>file:///home/ken/PX4-Autopilot/Tools/simulation/gz/worlds/Palm_Tree_3D_Models/d1-natural-palm-tree.usdz</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model> -->
+
+    <!-- <model name="palm_tree_fbx">
+      <static>true</static>
+      <pose>20 -20 0 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>file:///home/ken/PX4-Autopilot/Tools/simulation/gz/worlds/Palm_Tree_3D_Models/d4-natural-palm-tree.fbx</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <uri>file:///home/ken/PX4-Autopilot/Tools/simulation/gz/worlds/Palm_Tree_3D_Models/d4-natural-palm-tree.fbx</uri>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model> -->
+
+    <light name="sunUTC" type="directional">
+      <pose>0 0 500 0 -0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>0.001 0.625 -0.78</direction>
+      <diffuse>0.904 0.904 0.904 1</diffuse>
+      <specular>0.271 0.271 0.271 1</specular>
+      <attenuation>
+        <range>2000</range>
+        <linear>0</linear>
+        <constant>1</constant>
+        <quadratic>0</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>47.397971057728974</latitude_deg>
+      <longitude_deg>8.546163739800146</longitude_deg>
+      <elevation>0</elevation>
+    </spherical_coordinates>
+  </world>
+</sdf>
+
+
