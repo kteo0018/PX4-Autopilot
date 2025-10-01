@@ -288,5 +288,12 @@
       <child>imu_link</child>
     </joint>
 
+    <!-- Odometry Publisher Plugin -->
+    <plugin
+      filename="gz-sim-odometry-publisher-system"
+      name="gz::sim::systems::OdometryPublisher">
+      <dimensions>3</dimensions>
+    </plugin>
+
   </model>
 </sdf>
