@@ -51,3 +51,48 @@ rectification_matrix: 0
 rectification_matrix: 0
 rectification_matrix: 0
 rectification_matrix: 1
+
+_______________________
+
+# Camera model and intrinsics (640x480, ~70° HFOV)
+Camera.type: "PinHole"
+Camera.width: 640
+Camera.height: 480
+Camera.fps: 30.0
+Camera.fx: 457.6
+Camera.fy: 457.6
+Camera.cx: 320.0
+Camera.cy: 240.0
+
+# Distortion (Gazebo pinhole is ideal unless you add lens distortion)
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+Camera.k3: 0.0
+
+# RGB is in color order (Gazebo gives RGB)
+Camera.RGB: 1
+
+# Stereo baseline times fx (not used for RGBD, keep small)
+Camera.bf: 0.0
+
+# Depth handling: Gazebo depth image is FLOAT32 meters
+DepthMapFactor: 1.0   # meters -> meters (no scaling)
+# Increase if you want to treat depth as millimeters: e.g., 1000.0
+
+# Depth thresholds (meters)
+ThDepth: 40.0         # max depth considered for triangulation
+MinDepth: 0.2         # must be >= camera near clip
+
+# ORB extractor (defaults work well; adjust if texture is weak)
+ORBextractor.nFeatures: 1200
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+# RGBD tuning
+RGBD.LinearAcceleration: 0
+RGBD.CloseFactor: 1.0
+RGBD.DepthSigma: 0.0
