@@ -1,11 +1,13 @@
+camera_link:
+
 header {
   stamp {
-    sec: 119
-    nsec: 628000000
+    sec: 45
+    nsec: 676000000
   }
   data {
     key: "frame_id"
-    value: "x500_custom_0::rgbd_link::rgbd"
+    value: "x500_custom_0::camera_link::camera"
   }
 }
 width: 640
@@ -18,23 +20,23 @@ distortion {
   k: 0
 }
 intrinsics {
-  k: 381.3624668811355
+  k: 319.998779296875
   k: 0
   k: 320
   k: 0
-  k: 381.3624668811355
+  k: 319.99880790710449
   k: 240
   k: 0
   k: 0
   k: 1
 }
 projection {
-  p: 381.3624668811355
+  p: 319.998779296875
   p: 0
   p: 320
   p: 0
   p: 0
-  p: 381.3624668811355
+  p: 319.99880790710449
   p: 240
   p: 0
   p: 0
@@ -54,45 +56,59 @@ rectification_matrix: 1
 
 _______________________
 
-# Camera model and intrinsics (640x480, ~70° HFOV)
-Camera.type: "PinHole"
-Camera.width: 640
-Camera.height: 480
-Camera.fps: 30.0
-Camera.fx: 457.6
-Camera.fy: 457.6
-Camera.cx: 320.0
-Camera.cy: 240.0
+rgbd_link:
 
-# Distortion (Gazebo pinhole is ideal unless you add lens distortion)
-Camera.k1: 0.0
-Camera.k2: 0.0
-Camera.p1: 0.0
-Camera.p2: 0.0
-Camera.k3: 0.0
+header {
+  stamp {
+    sec: 67
+    nsec: 852000000
+  }
+  data {
+    key: "frame_id"
+    value: "x500_custom_0::rgbd_link::rgbd"
+  }
+}
+width: 640
+height: 480
+distortion {
+  k: 0
+  k: 0
+  k: 0
+  k: 0
+  k: 0
+}
+intrinsics {
+  k: 457.00759384660842
+  k: 0
+  k: 320
+  k: 0
+  k: 457.00759384660836
+  k: 240
+  k: 0
+  k: 0
+  k: 1
+}
+projection {
+  p: 457.00759384660842
+  p: 0
+  p: 320
+  p: 0
+  p: 0
+  p: 457.00759384660836
+  p: 240
+  p: 0
+  p: 0
+  p: 0
+  p: 1
+  p: 0
+}
+rectification_matrix: 1
+rectification_matrix: 0
+rectification_matrix: 0
+rectification_matrix: 0
+rectification_matrix: 1
+rectification_matrix: 0
+rectification_matrix: 0
+rectification_matrix: 0
+rectification_matrix: 1
 
-# RGB is in color order (Gazebo gives RGB)
-Camera.RGB: 1
-
-# Stereo baseline times fx (not used for RGBD, keep small)
-Camera.bf: 0.0
-
-# Depth handling: Gazebo depth image is FLOAT32 meters
-DepthMapFactor: 1.0   # meters -> meters (no scaling)
-# Increase if you want to treat depth as millimeters: e.g., 1000.0
-
-# Depth thresholds (meters)
-ThDepth: 40.0         # max depth considered for triangulation
-MinDepth: 0.2         # must be >= camera near clip
-
-# ORB extractor (defaults work well; adjust if texture is weak)
-ORBextractor.nFeatures: 1200
-ORBextractor.scaleFactor: 1.2
-ORBextractor.nLevels: 8
-ORBextractor.iniThFAST: 20
-ORBextractor.minThFAST: 7
-
-# RGBD tuning
-RGBD.LinearAcceleration: 0
-RGBD.CloseFactor: 1.0
-RGBD.DepthSigma: 0.0

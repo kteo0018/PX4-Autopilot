@@ -6,9 +6,9 @@
       <uri>x500</uri>
     </include>
 
-    <!-- Forward-facing Camera for Visual SLAM -->
+    <!-- Angled (forward + down) camera for low-altitude ORB-SLAM3 -->
     <link name='camera_link'>
-      <pose>0.12 0 0.05 0 0 0</pose>
+      <pose>0.12 0 0.05 0 0.349066 0</pose>
       <collision name='camera_collision'>
         <geometry>
           <box>
@@ -41,7 +41,7 @@
       </inertial>
       <sensor name='camera' type='camera'>
         <camera>
-          <horizontal_fov>1.39626</horizontal_fov>  <!-- 80 degrees -->
+          <horizontal_fov>1.5708</horizontal_fov>  <!-- 90 degrees -->
           <image>
             <width>640</width>
             <height>480</height>
@@ -65,7 +65,7 @@
 
     <!-- RGB-D Sensor (color + depth) for ORB-SLAM3 RGBD -->
     <link name='rgbd_link'>
-      <pose>0.12 0 0.05 0 0.35 0</pose>
+      <pose>0.12 0 0.05 0 0.349066 0</pose>
       <collision name='rgbd_collision'>
         <geometry>
           <box>
@@ -108,8 +108,8 @@
             <format>R8G8B8</format>
           </image>
           <clip>
-            <near>0.2</near>
-            <far>30</far>
+            <near>0.1</near>
+            <far>100</far>
           </clip>
         </camera>
         <depth_camera>
