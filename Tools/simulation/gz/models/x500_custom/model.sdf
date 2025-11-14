@@ -60,6 +60,7 @@
         <always_on>true</always_on>
         <update_rate>30</update_rate>
         <visualize>false</visualize>
+        <!-- <topic>custom_x500/sensor/camera/image</topic> -->
       </sensor>
     </link>
 
@@ -100,6 +101,7 @@
         <always_on>true</always_on>
         <update_rate>30</update_rate>
         <visualize>false</visualize>
+        <!-- <topic>custom_x500/sensor/rgbd</topic> -->
         <camera>
           <horizontal_fov>1.22173</horizontal_fov>
           <image>
@@ -164,6 +166,7 @@
         <always_on>true</always_on>
         <update_rate>10</update_rate>
         <visualize>false</visualize>
+        <!-- <topic>custom_x500/sensor/gps/navsat</topic> -->
         <gps>
           <horizontal_position_noise>0.05</horizontal_position_noise>
           <vertical_position_noise>0.05</vertical_position_noise>
@@ -210,6 +213,7 @@
         <always_on>true</always_on>
         <update_rate>200</update_rate>
         <visualize>false</visualize>
+        <!-- <topic>custom_x500/sensor/imu/imu</topic> -->
         <imu>
           <angular_velocity>
             <x>
